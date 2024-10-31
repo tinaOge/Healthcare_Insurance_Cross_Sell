@@ -7,7 +7,7 @@ from scripts.customer_segmentation.evaluation import evaluate_clustering
 
 def main():
     # Load data
-    df = load_data('data/raw/train.csv')  # Ensure the path to your data is correct
+    df = load_data('data/raw/train.csv')
     print("Data loaded successfully.")
 
     # Perform Exploratory Data Analysis (EDA)
@@ -19,7 +19,7 @@ def main():
 
     # Preprocess data
     print("Preprocessing data...")
-    df_cluster, y, selected_columns = preprocess_data(df)  # Capture selected_columns
+    df_cluster, y, selected_columns = preprocess_data(df)  
     print("Data preprocessing completed. New head:", df_cluster.head())
 
     # Define X_cluster

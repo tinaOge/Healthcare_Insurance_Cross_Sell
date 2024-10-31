@@ -4,6 +4,7 @@ from scripts.cross_sell_prediction.data_preprocessing import engineer_features, 
 from scripts.cross_sell_prediction.visualization import plot_target_distribution, plot_feature_distributions, \
     plot_histograms, plot_boxplots, plot_categorical_vs_target
 from scripts.cross_sell_prediction.model_training_and_evaluation import train_and_evaluate_model, generate_submission
+
 def load_data():
     # Load your train and test data here
     df_train = pd.read_csv('data/raw/train.csv', index_col='id')
@@ -14,7 +15,8 @@ def main():
     # Load data
     df_train, df_test = load_data()
 
-    # Perform visualizations as needed
+
+    # Perform visualizations
     plot_target_distribution(df_train)
     plot_feature_distributions(df_train)
     plot_histograms(df_train)
